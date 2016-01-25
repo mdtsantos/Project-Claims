@@ -3,9 +3,11 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-			<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script type="text/javascript" src = "https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
 	</head>
 	<body>
 		<nav class="navbar navbar-default">
@@ -84,279 +86,289 @@ Please complete as many fields as possible so that we are able to process your i
 						<legend>New Assigment</legend>
 						<div class="form-horizontal">
 							<div class="form-group">
-								<div class="col-md-6">
-									<div class="panel panel-primary">
-									<div class="panel-heading">Client Information<span class = "pull-right">1/4</span></div>
-									  	<div class="panel-body">
+								<div class="col-md-12">
+									<!-- Nav tabs -->
+								  	<ul class="nav nav-tabs" role="tablist">
+									    <li role="presentation" class="active"><a href="#client" aria-controls="client" role="tab" data-toggle="tab">Client</a></li>
+									    <li role="presentation"><a href="#coverage" aria-controls="coverage" role="tab" data-toggle="tab">Coverage Information</a></li>
+									    <li role="presentation"><a href="#insured" aria-controls="insured" role="tab" data-toggle="tab">Insured</a></li>
+									    <li role="presentation"><a href="#instructions" aria-controls="instructions" role="tab" data-toggle="tab">Instructions</a></li>
+									</ul>
+								</div>
+								<div class="col-md-12">
+										<!-- Tab panes -->
+									<br/>
+								  	<div class="tab-content">
+										<div class=" tab-pane active" role="tabpanel" id="client">
 										  	<div class="col-md-12">
-										  		<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Name</label>
-															<input type="text" class="form-control" placeholder = "ex. John Smith" maxlength="50" />
+											  	<div class="row">
+											  		<div class="well">
+											  			<div class="form-group">
+															<div class="col-md-6">
+																<label>Name</label>
+																<input type="text" class="form-control" placeholder = "ex. John Smith" maxlength="50" />
+															</div>
+															<div class="col-md-6">
+																<label>Company Name</label>
+																<input type="text" class="form-control" placeholder = "ex. Company Inc." maxlength="50"/>
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Company Name</label>
-															<input type="text" class="form-control" placeholder = "ex. Company Inc." maxlength="50"/>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Country</label>
+																<select class="form-control">
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																</select>
+															</div>
+															<div class="col-md-6">
+																<label>State/Province/Region</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="35"/>
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Country</label>
-															<select class="form-control">
-																<option></option>
-																<option></option>
-																<option></option>
-																<option></option>
-															</select>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>City</label>
+																<select class="form-control">
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																</select>
+															</div>
+															<div class="col-md-2">
+																<label>Zip Code</label>
+																<input type="tel" class="form-control" placeholder = "" maxlength="10"/>
+															</div>
 														</div>
-														<div class="col-md-6">
-															<label>State/Province/Region</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="35"/>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Address line 1</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+															<div class="col-md-6">
+																<label>Address line 2</label><sup>Optional</sup> 
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>City</label>
-															<select class="form-control">
-																<option></option>
-																<option></option>
-																<option></option>
-																<option></option>
-															</select>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Email</label>
+																<input type="text" class="form-control" placeholder = "sample@email.com" maxlength="50"/>
+															</div>
+															<div class="col-md-3">
+																<label>Contact Number</label>
+																<input type="tel" class="form-control" placeholder = "" maxlength="15"/>
+															</div>
+															<div class="col-md-3">
+																<label>Fax</label>
+																<input type="tel" class="form-control" placeholder = "0123456789" maxlength="10"/>
+															</div>
 														</div>
-														<div class="col-md-3">
-															<label>Zip Code</label>
-															<input type="tel" class="form-control" placeholder = "" maxlength="10"/>
+														<div class="form-group">
+															<div class="col-md-3">
+																<label>Date of Loss</label>
+																<input type="date" class="form-control" placeholder = "MM/DD/YYYY"/>
+															</div>
+															<div class="col-md-3">
+																<label>Claim Number</label>
+																<input type="text" class="form-control" placeholder = "ABC123456" maxlength="35"/>
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address line 1</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+														<div class="form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary pull-right" value="Next">
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address line 2</label><sup>Optional</sup> 
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+											  		</div>
+											  	</div>
+											</div>
+										</div>
+										<div class=" tab-pane" role="tabpanel" id="coverage">
+										  	<div class="col-md-12">
+											  	<div class="row">
+											  		<div class="well">
+											  			<div class="form-group">
+															<div class="col-md-3">
+																<label>Policy Number</label>
+																<input type="text" class="form-control" placeholder = "ABC12345635" maxlength="35"/>
+															</div>
+															<div class="col-md-3">
+																<label>Policy Dates</label>
+																<input type="date" class="form-control" placeholder = "MM/DD/YYYY"/>
+															</div>
+															<div class="col-md-3">
+																<label>Coverage Amount</label>
+																<div class="input-group"> 
+																    <span class="input-group-addon">$</span>
+																    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
+																</div> 
+															</div>
+															<div class="col-md-3">
+																<label>Deductable</label>
+																<div class="input-group"> 
+																    <span class="input-group-addon">$</span>
+																    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
+																</div> 
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Email</label>
-															<input type="text" class="form-control" placeholder = "sample@email.com" maxlength="50"/>
+														<div class="form-group">
+															<div class="col-md-3">
+																<label>Reserves</label>
+																<div class="input-group"> 
+																    <span class="input-group-addon">$</span>
+																    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
+																</div> 
+															</div>
+															<div class="col-md-3">
+																<label>Limit</label>
+																<div class="input-group"> 
+																    <span class="input-group-addon">$</span>
+																    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
+																</div> 
+															</div>
+															<div class="col-md-6">
+																<label>Coinsurance</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Contact Number</label>
-															<input type="tel" class="form-control" placeholder = "" maxlength="15"/>
+														<div class="form-group">
+															<div class="col-md-6 col-md-offset-6">
+																<label>ITV</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
 														</div>
-														<div class="col-md-6">
-															<label>Fax</label>
-															<input type="tel" class="form-control" placeholder = "0123456789" maxlength="10"/>
+														<div class="form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary pull-right" value="Next">
+															</div>
 														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Date of Loss</label>
-															<input type="date" class="form-control" placeholder = "MM/DD/YYYY"/>
+											  		</div>
+											  	</div>
+											</div>
+										</div>
+										<div class="tab-pane" role="tabpanel" id="insured">
+										  	<div class="col-md-12">
+											  	<div class="row">
+											  		<div class="well">
+												  		<div class="form-group">
+															<div class="col-md-6">
+																<label>Insured Name</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+															<div class="col-md-6">
+																<label>Insured Contact</label><sup>Optional</sup> 
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+														</div>	
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Country</label>
+																<select class="form-control">
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																</select>
+															</div>
+															<div class="col-md-6">
+																<label>State/Province/Region</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="35"/>
+															</div>
 														</div>
-														<div class="col-md-6">
-															<label>Claim Number</label>
-															<input type="text" class="form-control" placeholder = "ABC123456" maxlength="35"/>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>City</label>
+																<select class="form-control">
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																	<option></option>
+																</select>
+															</div>
+															<div class="col-md-2">
+																<label>Zip Code</label>
+																<input type="tel" class="form-control" placeholder = "" maxlength="10"/>
+															</div>
 														</div>
-													</div>
-												</div>
-											</div>												
-									  	</div>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Address line 1</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+															<div class="col-md-6">
+																<label>Address line 2</label><sup>Optional</sup> 
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+														</div>										  			
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Location of Loss</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+															<div class="col-md-3">
+																<label>City of Loss</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50"/>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Loss Description</label>
+																<textarea class="form-control" maxlength="400"></textarea>
+															</div>
+															<div class="col-md-6">
+																<label>Comments</label>
+																<textarea class="form-control" maxlength="400"></textarea>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary pull-right" value="Next">
+															</div>
+														</div>
+											  		</div>
+											  	</div>
+											</div>
+										</div>
+										<div class="tab-pane" role="tabpanel" id="instructions">
+										  	<div class="col-md-12">
+											  	<div class="row">
+											  		<div class="well">
+												  		<div class="form-group">
+															<div class="col-md-3">
+																<label>Report Due Date</label>
+																<input type="date" class="form-control" placeholder = "MM/DD/YYYY" />
+															</div>
+															<div class="col-md-3">
+																<label>Budget</label>
+																<div class="input-group"> 
+																    <span class="input-group-addon">$</span>
+																    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
+																</div> 
+															</div>
+															<div class="col-md-3">
+																<label>Vehicle Registration</label>
+																<input type="text" class="form-control" placeholder = "" maxlength="50" />
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="col-md-6">
+																<label>Upload Attachment</label>
+																<input type="file" class="form-control" placeholder = "" value = ""/>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="col-md-12">
+																<input type="submit" class="btn btn-primary pull-right" value="send">
+															</div>
+														</div>
+											  		</div>
+											  	</div>
+											</div>
+										</div>
 									</div>
-									<div class="panel panel-primary">
-									<div class="panel-heading">Coverage Information<span class = "pull-right">1/4</span></div>
-									  	<div class="panel-body">
-										  	<div class="col-md-12">
-										  		<div class="row">
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Policy Number</label>
-															<input type="text" class="form-control" placeholder = "ABC12345635" maxlength="35"/>
-														</div>
-														<div class="col-md-6">
-															<label>Policy Dates</label>
-															<input type="date" class="form-control" placeholder = "MM/DD/YYYY"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Coverage Amount</label>
-															<div class="input-group"> 
-															    <span class="input-group-addon">$</span>
-															    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
-															</div> 
-														</div>
-														<div class="col-md-6">
-															<label>Deductable</label>
-															<div class="input-group"> 
-															    <span class="input-group-addon">$</span>
-															    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
-															</div> 
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Reserves</label>
-															<div class="input-group"> 
-															    <span class="input-group-addon">$</span>
-															    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
-															</div> 
-														</div>
-														<div class="col-md-6">
-															<label>Limit</label>
-															<div class="input-group"> 
-															    <span class="input-group-addon">$</span>
-															    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
-															</div> 
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Coinsurance</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>ITV</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-												</div>
-											</div>												
-									  	</div>
-									</div>
-									<div class="panel panel-primary">
-									<div class="panel-heading">Insured<span class = "pull-right">1/4</span></div>
-									  	<div class="panel-body">
-										  	<div class="col-md-12">
-										  		<div class="row">
-										  			<div class="form-group">
-														<div class="col-md-12">
-															<label>Insured Name</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Insured Contact</label><sup>Optional</sup> 
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>	
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Country</label>
-															<select class="form-control">
-																<option></option>
-																<option></option>
-																<option></option>
-																<option></option>
-															</select>
-														</div>
-														<div class="col-md-6">
-															<label>State/Province/Region</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="35"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>City</label>
-															<select class="form-control">
-																<option></option>
-																<option></option>
-																<option></option>
-																<option></option>
-															</select>
-														</div>
-														<div class="col-md-3">
-															<label>Zip Code</label>
-															<input type="tel" class="form-control" placeholder = "" maxlength="10"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address line 1</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address line 2</label><sup>Optional</sup> 
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>											  			
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Location of Loss</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>City of Loss</label>
-															<input type="text" class="form-control" placeholder = "" maxlength="50"/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Loss Description</label>
-															<textarea class="form-control" maxlength="400"></textarea>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Comments</label>
-															<textarea class="form-control" maxlength="400"></textarea>
-														</div>
-													</div>
-												</div>
-											</div>												
-									  	</div>
-									</div>	
-									<div class="panel panel-primary">
-									<div class="panel-heading">Instructions<span class = "pull-right">1/4</span></div>
-									  	<div class="panel-body">
-										  	<div class="col-md-12">
-										  		<div class="row">
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>Report Due Date</label>
-															<input type="date" class="form-control" placeholder = "MM/DD/YYYY"/>
-														</div>
-														<div class="col-md-6">
-															<label>Budget</label>
-															<div class="input-group"> 
-															    <span class="input-group-addon">$</span>
-															    <input type="number" value="0" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" maxlength="35" />
-															</div> 
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Upload Attachment</label>
-															<input type="file" class="form-control" placeholder = "" value = ""/>
-														</div>
-													</div>
-													<div class="form-group">
-														<div class="col-md-12">
-															<input type="submit" class="btn btn-primary pull-right" value="send">
-														</div>
-													</div>
-												</div>
-											</div>												
-									  	</div>
-									</div>	
 								</div>
 							</div>	
 						</div>
@@ -364,5 +376,16 @@ Please complete as many fields as possible so that we are able to process your i
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+			$('#myTabs a:first').tab('show') // Select first tab
+			$('#myTabs a:last').tab('show') // Select last tab
+			$('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+					
+			$('#myTabs a').click(function (e) {
+				e.preventDefault()
+			$(this).tab('show')
+			})
+		</script>
 	</body>
 </html>
