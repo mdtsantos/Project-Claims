@@ -1,0 +1,21 @@
+{
+    "name": "lazarus/claims",
+    "description": "Claims Management System",
+    "type": "project",
+    "require": {
+        "mustache/mustache": "^2.9",
+        "twbs/bootstrap": "^3.3"
+    },
+    "license": "Lazarus",
+    "authors": [
+        {
+            "name": "Lazarus",
+            "email": "contact@domain.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Claims\\": "src/"
+        }
+    }
+}
