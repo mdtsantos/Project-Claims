@@ -2,14 +2,16 @@
 <html>
 	<head>
 		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style-responsive.css">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<script type="text/javascript" src = "https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
 	</head>
-	<body>
+	<body class="login-body">
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 	    		<!-- Brand and toggle get grouped for better mobile display -->
@@ -50,7 +52,7 @@
 				        <li><a href="#">Link</a></li>
 				        <li class="dropdown">
 				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				          	<ul class="dropdown-menu">
+				          	<ul class="dropdown-menu"> col-xs
 					            <li><a href="#">Action</a></li>
 					            <li><a href="#">Another action</a></li>
 					            <li><a href="#">Something else here</a></li>
@@ -62,44 +64,157 @@
 	    		</div><!-- /.navbar-collapse -->
 	  		</div><!-- /.container-fluid -->
 		</nav>
-		<div class="container">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="wrapper">
-						<div class="col-md-3 centered">
-							<div class="panel panel-default">
-							  	<div class="panel-heading">Login</div>
-						  		<div class="panel-body">
-							    	<fieldset>
-										<div class="form-horizontal">
-											<div class="form-group">
-												<div class="col-md-12">
-													<input type="text" class="form-control" placeholder = "username" />
+		<div class="container wrapper">
+			<div class="main">
+				<div class="column">
+					<center><div><img class="small-logo" src="assets/images/logo.png"></div></center>
+
+					<div class="col-md-12">
+					<div>
+
+ 					<!-- Nav tabs -->
+  						<ul class="nav nav-tabs login" role="tablist">
+						    <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab"><h4>Login</h4></a></li>
+						    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab"><h4>Register</h4></a></li>
+						    <li role="presentation"><a href="#resetpsw" aria-controls="resetpsw" role="tab" data-toggle="tab"><h4>Reset Password</h4></a></li>
+  						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+						    <div role="tabpanel" class="tab-pane active" id="login">
+								<div class="panel login-panel panel-default shadow">
+							  		<div class="panel-body scy_color">
+								    	<fieldset>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<div class="col-md-12">
+														<h1>Login on Project Claims</h1>
+														<p><small>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius bladit sit amet non</small></p>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="text" class="form-control valid" placeholder = "username" maxlength="35" />
+														<span class="glyphicon glyphicon-user inner" aria-hidden="true"></span>
+														<span class = "validation" style = "display:block">
+															<small>username is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="password" class="form-control invalid" placeholder = "password" maxlength="50" />
+														<span class="glyphicon glyphicon-lock inner" aria-hidden="true"></span>
+														<span class = "validation" style = "display:block">
+															<small>password is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary pull-right login-btn" value="Login">
+													</div>
 												</div>
 											</div>
-											<div class="form-group">
-												<div class="col-md-12">
-													<input type="password" class="form-control" placeholder = "password" />
+										</fieldset>
+							  		</div>
+								</div>						    	
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="register">
+						    	<div class="panel login-panel panel-default shadow">
+							  		<div class="panel-body scy_color">
+								    	<fieldset>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<div class="col-md-12">
+														<h1 class="login-h1">Register</h1>
+														<p><small>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius bladit sit amet non</small></p>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="text" class="form-control valid" placeholder = "username" maxlength="35" />
+														<span class="glyphicon glyphicon-user inner" aria-hidden="true"></span>
+														<span class = "validation" style = "display:block">
+															<small>username is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="password" class="form-control invalid" placeholder = "password" maxlength="50" />
+														<span class="glyphicon glyphicon-lock inner" aria-hidden="true"></span>
+														<span class = "validation" style = "display:block">
+															<small>password is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary pull-right login-btn" value="Sign Up">
+													</div>
 												</div>
 											</div>
-											<div class="form-group">
-												<div class="col-md-12">
-													<a href="#">forgot password?</a>
+										</fieldset>
+							  		</div>
+								</div>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="resetpsw">
+						    	<div class="panel login-panel panel-default shadow">
+							  		<div class="panel-body scy_color">
+								    	<fieldset>
+											<div class="form-horizontal">
+												<div class="form-group">
+													<div class="col-md-12">
+														<h1 class="login-h1">Reset Password</h1>
+														<p><small>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius bladit sit amet non</small></p>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="email" class="form-control valid" placeholder = "email" maxlength="35" />
+														<span class="glyphicon glyphicon-user inner" aria-hidden="true"></span>
+														<span class = "validation" style = "display:block">
+															<small>email is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="birthdate" class="form-control invalid" id="login_birthdate" placeholder = "birthdate" onfocus="(this.type='date')"/>
+														<span class = "validation" style = "display:block">
+															<small>birthday is required!</small>
+														</span>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-md-12">
+														<input type="submit" class="btn btn-primary pull-right login-btn" value="Send">
+													</div>
 												</div>
 											</div>
-											<div class="form-group">
-												<div class="col-md-12">
-													<input type="submit" class="btn btn-primary form-control pull-right" value="Login">
-												</div>
-											</div>
-										</div>
-									</fieldset>
-						  		</div>
-							</div>
+										</fieldset>
+							  		</div>
+								</div>
+						    </div>
 						</div>
+
+					</div>					
+
+					
 					</div>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+			$('#myTabs a:first').tab('show') // Select first tab
+			$('#myTabs a:last').tab('show') // Select last tab
+			$('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+			$('#myTabs a').click(function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+		</script>
 	</body>
 </html>
