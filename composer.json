@@ -4,7 +4,11 @@
     "type": "project",
     "require": {
         "mustache/mustache": "^2.9",
-        "twbs/bootstrap": "^3.3"
+        "illuminate/container": "~5.2",
+        "illuminate/events": "~5.2",
+        "illuminate/routing": "~5.2",
+        "vlucas/phpdotenv": "^2.2",
+        "robmorgan/phinx": "^0.5.1"
     },
     "license": "Lazarus",
     "authors": [
